@@ -40,11 +40,10 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           }}>
             <ul style={{ margin: 10, paddingTop: 30}}>
               <li className='list-item time'>امروز: <span className='time'>{props.api_time.time24.hour.fa}:{props.api_time.time24.minute.fa}:{props.api_time.time24.second.fa} | {props.api_time.date.day.number.fa} {props.api_time.date.month.name} {props.api_time.date.year.number.fa}</span></li>
-              <li className="list-item price">قیمت: <span className="price">{(props.price.price as number).toLocaleString("fa-IR")}</span></li>
-              <li className="list-item changes">تغییرات در ۲۴ ساعت گذشته: <span>{(parseFloat(props.price.diff24d)).toLocaleString("fa-IR")}٪</span></li>
-              <li className="list-item changes">تغییرات در ۷ روز گذشته: <span>{(parseFloat(props.price.diff7d)).toLocaleString("fa-IR")}٪</span></li>
-              <li className="list-item changes">تغییرات در ۳۰ روز گذشته: <span>{(parseFloat(props.price.diff30d)).toLocaleString("fa-IR")}٪</span></li>
-
+              <li className="list-item price">دما: <span className="price">{parseFloat(props.current_condition.temp_C).toLocaleString("fa-IR")} سانتی گراد</span> | <span className='price'>{parseFloat(props.current_condition.temp_F).toLocaleString("fa-IR")} فارنهایت</span></li>
+              <li className="list-item price">دما: <span className="price">{parseFloat(props.current_condition.temp_C).toLocaleString("fa-IR")} سانتی گراد</span> | <span className='price'>{parseFloat(props.current_condition.temp_F).toLocaleString("fa-IR")} فارنهایت</span></li>
+              <li className="list-item price">دما: <span className="price">{parseFloat(props.current_condition.temp_C).toLocaleString("fa-IR")} سانتی گراد</span> | <span className='price'>{parseFloat(props.current_condition.temp_F).toLocaleString("fa-IR")} فارنهایت</span></li>
+              <li className="list-item price">دما: <span className="price">{parseFloat(props.current_condition.temp_C).toLocaleString("fa-IR")} سانتی گراد</span> | <span className='price'>{parseFloat(props.current_condition.temp_F).toLocaleString("fa-IR")} فارنهایت</span></li>
             </ul>
           </div>
 
@@ -65,17 +64,19 @@ export async function getServerSideProps(context) {
     usedquota, quota, quotaunit, status, regdate, expid,
     role, path, devmod, userip, } = session;
     
-    let response = await (await fetch("https://api.tetherland.com/currencies"))
+    let response = await (await fetch("https://irmapserver.ir/research/api/weather/"))
     let time_response = await (await fetch("https://api.keybit.ir/time/"))
     let api_time = await time_response.json()
     let data = await response.json()
-    let price = data.data.currencies.USDT
+    let current_condition = data.current_condition[0]
+    let area = null
+    let weather = null
 
     
     return {
       props: {
         data: global.QSON.stringify({
-          price:price,
+          current_condition:current_condition,
           session,
           api_time:api_time,
           // nlangs,
