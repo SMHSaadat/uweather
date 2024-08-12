@@ -74,7 +74,6 @@ export async function getServerSideProps(context) {
     let weather = data.weather[0]
     let sunrise = data.weather[0].astronomy[0].sunrise
 
-    console.log(sunrise.slice(0, 5))
 
 
     
