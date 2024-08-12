@@ -47,7 +47,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
             </ul>
           </div>
-
+          <p style={{width: "calc(100% - 20px)", marginInline:360, marginTop:25}}>تیم پژوهشی تورینگ</p>
         </div>
 
       </Window>
