@@ -14,7 +14,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
   let styles = global.styles
   global.lang = { ff: "vr", ffb: "vb" }
 
-  let name = "سرویس قیمت لحظه ای تتر"
+  let name = "سرویس هواشناسی"
   let img_address = "utether\\public\\6256878.jpg"
   
   return (
@@ -29,13 +29,13 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           <div className='second-image-div'>
             <img src="/test2.png" alt="hi" />
           </div>
-          <div className='image-div' style={{backgroundColor:"rgba(25,25,112,)"}}>
+          <div className='image-div'>
             <img src="/weather.png" alt="" />
           </div>
 
           <div style={{
             width: "70%", height: 300,
-            borderRadius: 20, backgroundColor: "rgba(25,25,112,0.95)",
+            borderRadius: 20, backgroundColor: "rgba(25,25,112,0.80)",
             marginRight: 20, color: "white", 
           }}>
             <ul style={{ margin: 10, paddingTop: 30}}>

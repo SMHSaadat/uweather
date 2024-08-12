@@ -768,7 +768,7 @@ div.second-image-div img:hover{
 
 div .bg{
   background-color:#c7c7c7 ;
-  background-image: url("/bg.jpg");
+  background-image: url("/background.jpg");
   background-size: cover;
   width: 90%;
   height: 400px;
