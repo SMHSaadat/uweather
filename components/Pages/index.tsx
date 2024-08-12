@@ -29,7 +29,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           <div className='second-image-div'>
             <img src="/test2.png" alt="hi" />
           </div>
-          <div className='image-div' style={{backgroundColor:"rgba(25,25,112,0.95)"}}>
+          <div className='image-div' style={{backgroundColor:"rgba(25,25,112,)"}}>
             <img src="/weather.png" alt="" />
           </div>
 
@@ -41,7 +41,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
             <ul style={{ margin: 10, paddingTop: 30}}>
               <li className='list-item time hover' style={{fontSize:"140%"}}><span className='time'>{props.api_time.time24.hour.fa}:{props.api_time.time24.minute.fa}:{props.api_time.time24.second.fa} | {props.api_time.date.day.number.fa} {props.api_time.date.month.name} {props.api_time.date.year.number.fa}</span> |<span className='time'>🌇{(parseFloat((props.weather.astronomy[0].sunrise).slice(0, 2)).toLocaleString("fa-IR"))}:{(parseFloat((props.weather.astronomy[0].sunrise).slice(3, 5)).toLocaleString("fa-IR"))}</span> |<span className='time'>🌆{(parseFloat((props.weather.astronomy[0].sunset).slice(0, 2)).toLocaleString("fa-IR"))}:{(parseFloat((props.weather.astronomy[0].sunset).slice(3, 5)).toLocaleString("fa-IR"))}</span></li>
               <li className="list-item location hover"><span className="weather c-blue">ایران</span> | <span className='c-blue'>فارس</span> | <span className='c-blue'>شیراز</span> | <span className='c-blue'>{parseFloat(props.area.population).toLocaleString("fa-IR")} نفر</span></li>
-              <li className='list-item weather-info hover'><span className='c-blue'>هوا: آفتابی</span> | <span className='c-blue'>😎 سطح اشعه فرابنفش: {parseFloat(props.current_condition.uvIndex).toLocaleString("fa-IR")}</span></li>
+              <li className='list-item weather-info-2 hover'><span className='c-blue'>هوا: آفتابی</span> | <span className='c-blue'>😎 سطح اشعه فرابنفش: {parseFloat(props.current_condition.uvIndex).toLocaleString("fa-IR")}</span></li>
               <li className="list-item weather hover"><span className="c-blue">{parseFloat(props.current_condition.temp_C).toLocaleString("fa-IR")} سانتی گراد</span> | <span className='c-blue'>⬇️{parseFloat(props.weather.mintempC).toLocaleString("fa-IR")}</span> | <span className='c-blue'>⬆️{parseFloat(props.weather.maxtempC).toLocaleString("fa-IR")}</span></li>
               <li className='list-item weather-info hover'><span className='c-blue'>رطوبت: {parseFloat(props.current_condition.humidity).toLocaleString("fa-IR")}٪</span> |<span className='c-blue'>🍃وزش باد: {parseFloat(props.current_condition.windspeedKmph).toLocaleString('fa-IR')}</span><span className='c-blue' style={{fontSize:"15px"}}>کیلومتربرساعت</span></li>
 

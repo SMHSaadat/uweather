@@ -790,6 +790,9 @@ div li.location::before{
 div li.weather-info::before{
   content:" 💧 ";
 }
+div li.weather-info-2::before{
+  content:" 🌥️ ";
+}
 li.list-item.time::before{
   content:"⌚ " ;
 }
@@ -803,5 +806,5 @@ li span.c-blue{
 }
 
 li.hover:hover{
-  background-color: darkblue;
+  background-color: rgba(25 47 112 / 0.95);
 }
