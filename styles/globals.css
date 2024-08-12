@@ -736,14 +736,15 @@ li span{
 
 div .image-div{
   width: 20%;
-  margin-left: 8%;
+  margin-left: 7%;
+  margin-top: 3%;
   float: left;
 }
 
 div.image-div img{
   max-width: 100%;
   size: 10px;
-  margin-top: 50%;
+  margin-top: 35%;
   
 }
 div.image-div img:hover{
@@ -780,8 +781,14 @@ div ul{
   list-style-type:none
 }
 
-div li.price::before{
-  content:"💰 ";
+div li.weather::before{
+  content:" 🌡️ ";
+}
+div li.location::before{
+  content:" 📌 ";
+}
+div li.weather-info::before{
+  content:" 💧 ";
 }
 li.list-item.time::before{
   content:"⌚ " ;
@@ -791,6 +798,10 @@ li.list-item.changes::before{
   content: "📈 ";
 }
 
-li span.price{
+li span.c-blue{
   color: aqua
+}
+
+li.hover:hover{
+  background-color: darkblue;
 }
