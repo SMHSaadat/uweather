@@ -72,7 +72,6 @@ export async function getServerSideProps(context) {
     let current_condition = data.current_condition[0]
     let area = data.nearest_area[0]
     let weather = data.weather[0]
-    let sunrise = data.weather[0].astronomy[0].sunrise
 
 
 
