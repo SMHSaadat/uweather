@@ -1,6 +1,6 @@
 This is a uservice project from Turing Research Team.
 <img src="https://github.com/SMHSaadat/uweather/blob/master/turing.png"/>
-<img src=""/>
+<img src="https://github.com/SMHSaadat/uweather/blob/master/logo.png"/>
 ## Getting Started
 
 First, run the development server:
